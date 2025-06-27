@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-5時間割</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>現在時刻</h2>
+            <div id="datetime" style="font-size: 2em; font-weight: bold;"></div>
+            <h2>現在とその後の授業</h2>
+            <div id="nowSubject" class="subject"></div>
+            <div id="nextSubject" class="subject"></div>
+        </div>
+        <div class="right">
+            <h2>時間割</h2>
+            <div id="timetable" class="timetable"></div>
+            <h3>時間割の選択</h3>
+            <div class="selectbox-parent">
+                理科選択:
+                <label class="scienceChoice selectbox-common">
+                    <select name="scienceChoice" id="scienceChoice">
+                        <option value="sccPhyBio1">物理生物1</option>
+                        <option value="sccPhyBio2">物理生物2</option>
+                        <option value="sccGeoBio1">地学生物1</option>
+                        <option value="sccGeoBio2">地学生物2</option>
+                        <option value="sccPhyGeo1">物理地学1</option>
+                        <option value="sccPhyGeo2">物理地学2</option>
+                    </select>
+                </label>
+            </div>
+            <div class="selectbox-parent">
+            社会選択:
+            <label class="socialChoice selectbox-common">
+                <select name="socialChoice" id="socialChoice">
+                    <option value="socJapanese">日本史</option>
+                    <option value="socWorld">世界史</option>
+                </select>
+            </label>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+body {
+    font-family: sans-serif;
+}
+
+
+.cell-container {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    width: 120px;
+}
+
+.main-info,
+.sub-info {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-info {
+    flex: 3;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.sub-info {
+    flex: 1;
+    font-size: 1.2em;
+    color: gray;
+}
+
+.subject {
+    font-size: 3.0em;
+    font-weight: bold;
+}
+
+
+.container {
+    display: flex;
+    /* 横並びにする */
+    height: 100vh;
+    /* 画面の高さいっぱいにする */
+}
+
+.left,
+.right {
+    flex: 1;
+    /* 幅を50%ずつにする */
+    padding: 20px;
+    /* 余白をつける */
+}
+
+.left {
+    background-color: #d0ebff;
+    /* 左側の背景色 */
+}
+
+.right {
+    background-color: #ffd6a5;
+    /* 右側の背景色 */
+}
+
+.selectbox-common {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 0.3em;
+    border: 2px solid #000;
+    border-radius: 3px;
+}
+
+/*プルダウンの三角を設定*/
+.selectbox-common::before {
+    position: absolute;
+    right: 15px;
+    content: '';
+    width: 16px;
+    height: 8px;
+    background: #666666;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.selectbox-common select {
+    width: 100%;
+    padding: 10px 45px 10px 10px;
+    color: #000;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    /*テキストがオーバーしたら'...'で省略*/
+    z-index: 1;
+    /* 標準のスタイルを無効にする */
+    border: none;
+    appearance: none;
+    outline: none;
+    background: transparent;
+    font-size: medium;
+}
+
+.selectbox-parent {
+    display: flex;
+    gap: 10px;
+    /* 間隔調整 */
+    align-items: center;
+    /* 縦位置を揃える */
+    font-size: 1.4em;
+}
+
+.timetable {
+    font-family: 'Times New Roman', '游明朝', 'Yu Mincho', serif;
+}
