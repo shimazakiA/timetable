@@ -58,7 +58,7 @@ const schedules = {
         { start: 670, id: 'fri-4' },
         { start: 760, id: 'fri-5' },
         { start: 820, id: 'fri-6' },
-        { start: 880, id: `fri-7` }
+        { start: 880, id: 'fri-7' }
     ],
     6: [ // 土曜日
         { start: 490, id: 'sat-1' },
