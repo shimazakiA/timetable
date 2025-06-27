@@ -302,8 +302,7 @@ function GetCurrentSubject() {
     const dayName = days[day];
 
     let result = '';
-
-    if (day === 1 || day === 2 || day === 4 || day === 5) { // 月, 火, 木, 金
+    if (day === 1 || day === 2 || day === 4) { // 月, 火, 木
         if (time >= 0 && time < 490) {
             result = 'beforeschool';
         } else if (time >= 490 && time < 540) {
@@ -323,6 +322,28 @@ function GetCurrentSubject() {
         } else {
             result = 'rest';
         }
+    }else if (day === 5) { // 金曜日
+            if (time >= 0 && time < 490) {
+                result = 'beforeschool';
+            } else if (time >= 490 && time < 540) {
+                result = `${dayName}-1`;
+            } else if (time >= 550 && time < 600) {
+                result = `${dayName}-2`;
+            } else if (time >= 610 && time < 660) {
+                result = `${dayName}-3`;
+            } else if (time >= 670 && time < 720) {
+                result = `${dayName}-4`;
+            } else if (time >= 760 && time < 810) {
+                result = `${dayName}-5`;
+            } else if (time >= 820 && time < 870) {
+                result = `${dayName}-6`;
+            } else if (time >= 880 && time < 930) {
+                result = `${dayName}-7`;
+            }else if (time >= 930 && time < 1440) {
+                result = 'afterschool';
+            } else {
+                result = 'rest';
+            }
     } else if (day === 3) { // 水曜日
         if (time >= 0 && time < 490) {
             result = 'beforeschool';
